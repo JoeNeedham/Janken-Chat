@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+
 html,
 body {
   padding: 0;
@@ -25,4 +28,21 @@ body {
   );
   background-size: cover;
   height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serf;
+}
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  bottom: 10px;
+  position: fixed;
+}
+.modes,
+.rules{
+  padding: 8px 25px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 8px;
+  text-transform: uppercase;
 }
