@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React, { useState } from 'react'
 import { Header } from '../components/Header';
+import { Rules } from '../components/Rules';
 
 export default function Home() {
   const [advancedMode, setAdvancedMode] = useState(false);
@@ -20,8 +21,13 @@ export default function Home() {
         <div onClick={changeMode} className="modes">
             {advancedMode ? "Advanced" : "Normal"} Mode
         </div>
-        <div className="rules">Rules</div>
+        <div className="rules" onClick={() => setOpen(!open)}>Rules</div>
       </footer>
+      <Rules
+        open={open}
+        advanced={advancedMode}
+        setopen={() => setOpen(!open)}
+        />
     </div>
   )
 }
