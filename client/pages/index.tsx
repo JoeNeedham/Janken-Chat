@@ -23,6 +23,8 @@ export default function Home() {
         </div>
         <div className="rules" onClick={() => setOpen(!open)}>Rules</div>
       </footer>
+
+      {/* <Play advanced={advancedMode} /> */}
       <Rules
         open={open}
         advanced={advancedMode}
