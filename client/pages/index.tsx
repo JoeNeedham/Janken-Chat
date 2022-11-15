@@ -2,6 +2,7 @@ import Head from 'next/head'
 import React, { useState } from 'react'
 import { Header } from '../components/Header';
 import { Rules } from '../components/Rules';
+import { Play } from '../components/Play';
 
 export default function Home() {
   const [advancedMode, setAdvancedMode] = useState(false);
@@ -24,7 +25,7 @@ export default function Home() {
         <div className="rules" onClick={() => setOpen(!open)}>Rules</div>
       </footer>
 
-      {/* <Play advanced={advancedMode} /> */}
+      <Play advanced={advancedMode} />
       <Rules
         open={open}
         advanced={advancedMode}

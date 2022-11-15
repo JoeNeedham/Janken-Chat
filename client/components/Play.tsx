@@ -20,7 +20,7 @@ export const Play: FunctionComponent<RulesProps> = ({ advanced }) => {
             {advanced ? (
                 <img src="/bg-pentagon.svg" />
             ) : (
-                <img src="/bg-triange.svg" />
+                <img src="/bg-triangle.svg" />
             )}
             <PlayButtons advanced={advanced} />
         </motion.div>

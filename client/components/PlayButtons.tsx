@@ -13,32 +13,32 @@ const PlayButtons: FunctionComponent<PlayButtonProps> = ({ advanced }) => {
             <motion.div className={styles.playbuttons}>
                 {advanced ? (
                     <div className={styles.threegrid}>
-                        <Button className={styles.sci} lid="sci">
+                        <Button classN={styles.sci} lid="sci">
                             <img src="/icon-scissors.svg" alt="" />
                         </Button>
-                        <Button className={styles.spock}>
+                        <Button classN={styles.spock}>
                             { " " }
                             <img src="/icon-spock.svg" alt="" />
                         </Button>
-                        <Button className={styles.paper} lid="paper">
+                        <Button classN={styles.paper} lid="paper">
                             <img src="/icon-paper.svg" alt="" />
                         </Button>
-                        <Button className={styles.liz}>
+                        <Button classN={styles.liz}>
                             <img src="/icon-lizard.svg" alt="" />
                         </Button>
-                        <Button className={styles.rock} lid="rock">
+                        <Button classN={styles.rock} lid="rock">
                             <img src="/icon-rock.svg" alt="" />
                         </Button>
                     </div>
                 ) : (
                     <div className={styles.twogrid}>
-                        <Button className={styles.sci2} lid="sci">
+                        <Button classN={styles.sci2} lid="sci">
                             <img src="/icon-scissors.svg" alt="" />
                         </Button>
-                        <Button className={styles.paper2} lid="paper">
+                        <Button classN={styles.paper2} lid="paper">
                             <img src="/icon-paper.svg" alt="" />
                         </Button>
-                        <Button className={styles.rock2} lid="rock">
+                        <Button classN={styles.rock2} lid="rock">
                             <img src="/icon-rock.svg" alt="" />
                         </Button>
                     </div>
@@ -47,3 +47,5 @@ const PlayButtons: FunctionComponent<PlayButtonProps> = ({ advanced }) => {
         </AnimateSharedLayout>
     )
 }
+
+export default PlayButtons
