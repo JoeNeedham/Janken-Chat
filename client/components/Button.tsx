@@ -5,11 +5,12 @@ import styles from "../styles/Play.module.css"
 type ButtonProps = {
     classN: string;
     lid?: string;
+    onClicK: any;
 };
 
-const Button: FunctionComponent<ButtonProps> = ({ classN, children, lid}) => {
+const Button: FunctionComponent<ButtonProps> = ({ classN, children, lid, onClicK }) => {
     return(
-        <motion.div layoutId={lid} className={classN}>
+        <motion.div onClick={() => onClicK()} layoutId={lid} className={classN}>
             <div className={styles.inside}>{children}</div>
         </motion.div>
     );

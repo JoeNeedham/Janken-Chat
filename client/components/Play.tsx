@@ -3,18 +3,17 @@ import React, { FunctionComponent } from "react";
 import styles from "../styles/Play.module.css";
 import PlayButtons from "./PlayButtons";
 
-type RulesProps = {
+type PlayProps = {
     advanced: boolean;
-    setopen?: any;
-    open?: boolean;
+    setselected?: any;
 };
 
-export const Play: FunctionComponent<RulesProps> = ({ advanced }) => {
+export const Play: FunctionComponent<PlayProps> = ({ advanced, setselected }) => {
     return (
         <motion.div
-            initial={{ rotate: 360 }}
-            animate={{ rotate: 0 }}
-            exit={{ rotate: 360 }}
+            initial={{ rotate: 1360, scale: 0, opacity: 0 }}
+            animate={{ rotate: 0, scale: 1, opacity: 0 }}
+            exit={{ rotate: 2360, scale: 0, opacity: 0 }}
             className={styles.container}
         >
             {advanced ? (
@@ -22,8 +21,12 @@ export const Play: FunctionComponent<RulesProps> = ({ advanced }) => {
             ) : (
                 <img src="/bg-triangle.svg" />
             )}
-            <PlayButtons advanced={advanced} />
+            <PlayButtons
+                onCLick={(value: any) => setselected(value)}
+                advanced={advanced}
+            />
         </motion.div>
     )
 }
+
 
